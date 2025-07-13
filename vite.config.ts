@@ -14,6 +14,12 @@ export default defineConfig(({ mode }) => ({
     mode === 'development' &&
     componentTagger(),
   ].filter(Boolean),
+  build: {
+    rollupOptions: {
+      // Force Rollup instead of esbuild for better WebContainer compatibility
+    }
+  },
+  esbuild: false,
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
