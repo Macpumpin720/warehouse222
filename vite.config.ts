@@ -19,7 +19,6 @@ export default defineConfig(({ mode }) => ({
       // Force Rollup instead of esbuild for better WebContainer compatibility
     }
   },
-  esbuild: false,
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
